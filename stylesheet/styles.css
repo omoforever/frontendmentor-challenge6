@@ -43,14 +43,22 @@ main {
     justify-content: center;
     gap: 10rem;
     max-width: 950px;
-    margin: auto;
+    margin: 0 auto;
+    margin-bottom: 5rem;
+}
 
+.cards-container {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    gap: 1rem;
 }
 
 .card-front {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    /* key change! */
     gap: 1rem;
     padding: 1rem;
     color: var(--color-white);
@@ -61,12 +69,46 @@ main {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+}
 
+.card-back {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 1rem;
+    color: var(--color-white);
+    /* assuming same text color */
+    min-width: 320px;
+    height: auto;
+    border-radius: 0.5rem;
+    background-image: url("/images/bg-card-back.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.card-back span {
+    margin-right: 1.25rem;
+}
+
+.card-front,
+.card-back {
+    aspect-ratio: 4 / 2;
+}
+
+.card-digits {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    letter-spacing: 0.325rem;
 }
 
 .card-front-bottom {
     display: flex;
     justify-content: space-between;
+    font-size: smaller;
 }
 
 .card-front img {
@@ -74,11 +116,12 @@ main {
     margin-bottom: 1rem;
 }
 
-.card-back {
-
-    position: relative;
+.card-back img {
+    width: 320px;
 
 }
+
+
 
 .form-fields-container {
     max-width: 300px;
