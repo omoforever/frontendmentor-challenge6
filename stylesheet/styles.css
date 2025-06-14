@@ -85,6 +85,7 @@ main {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    transform: translateX(50px);
 }
 
 .card-back span {
